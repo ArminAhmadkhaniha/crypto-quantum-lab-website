@@ -1,0 +1,22 @@
+# --- GLOBAL ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- HUGO (Website) ---
+website/public/
+website/resources/_gen/
+
+# --- REACT (Submission Portal) ---
+submission-portal/node_modules/
+submission-portal/build/
+submission-portal/dist/
+submission-portal/.env
+
+# --- GO (Backend) ---
+backend-api/bin/
+backend-api/vendor/
+backend-api/*.exe
+backend-api/*.test
+backend-api/main  # Binary name
