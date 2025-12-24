@@ -1,0 +1,62 @@
+baseURL: "https://yourlab.github.io"
+title: "Home"
+theme: "PaperMod"
+languageCode: "en-us"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  defaultTheme: light
+  disableThemeToggle: true
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+  
+  
+  socialIcons:
+    # - name: github
+    #   url: "https://github.com/"
+    - name: email
+      url: "mailto:jake.doliskani@mcmaster.ca"
+
+  # 3. THE LOGO
+  label:
+    text: "Crypto-Quantum Lab"
+    icon: "/home.svg"
+    iconHeight: 35
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 10
+    - identifier: members
+      name: Members
+      url: /Members/
+      weight: 20
+    - identifier: search
+      name: 🔍
+      url: /search/
+      weight: 30
+  

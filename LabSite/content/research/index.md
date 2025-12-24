@@ -1,0 +1,181 @@
+---
+layout: "page"
+---
+<script>
+function filterResearch(category) {
+    // 1. Update Buttons
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    // 2. Filter Cards
+    const cards = document.querySelectorAll('.pub-card');
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category.includes(category)) {
+            card.classList.remove('hide');
+            card.classList.add('show');
+        } else {
+            card.classList.add('hide');
+            card.classList.remove('show');
+        }
+    });
+}
+</script>
+
+<div class="container" style="padding-top: 50px; padding-bottom: 100px;">
+    <div class="text-center" style="margin-bottom: 60px;">
+        <h1 class="display-1" style="color: #0f172a; font-size: 3rem;">Research & Publications</h1>
+        <p class="lead" style="max-width: 700px; margin: 0 auto; color: #64748b;">
+            Exploring the frontiers of Post-Quantum Cryptography, Isogeny Graphs, and Quantum Software Engineering.
+        </p>
+    </div>
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterResearch('all')">All Topics</button>
+        <button class="filter-btn" onclick="filterResearch('money')">💰 Quantum Money</button>
+        <button class="filter-btn" onclick="filterResearch('isogeny')">🕸️ Isogeny / PQC</button>
+        <button class="filter-btn" onclick="filterResearch('software')">🐛 Quantum Software</button>
+        <button class="filter-btn" onclick="filterResearch('algo')">🎲 Algorithms</button>
+        <button class="filter-btn" onclick="filterResearch('fields')">🧮 Finite Fields</button>
+    </div>
+    <div class="papers-grid">
+        <div class="pub-card" data-category="money">
+            <div class="pub-year">2025</div>
+            <div class="pub-title">Public-Key Quantum Money From Standard Assumptions (In The Generic Model)</div>
+            <div class="pub-authors">Jake Doliskani</div>
+            <div class="pub-venue">Manuscript / Pre-print</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Quantum Money</span>
+                <a href="https://doliskani.net/jake/pdfs/qm_group_action.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="isogeny">
+            <div class="pub-year">2024</div>
+            <div class="pub-title">Failing to hash into supersingular isogeny graphs</div>
+            <div class="pub-authors">Jeremy Booher, Ross Bowden, Javad Doliskani, et al.</div>
+            <div class="pub-venue">The Computer Journal, Oxford University Press</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Isogeny Graphs</span>
+                <a href="https://doliskani.net/jake/pdfs/ss_hash_fail.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="algo">
+            <div class="pub-year">Manuscript</div>
+            <div class="pub-title">Efficient Quantum Public-Key Encryption From Learning With Errors</div>
+            <div class="pub-authors">Javad Doliskani</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Quantum LWE</span>
+                <a href="https://doliskani.net/jake/pdfs/quantum_pke_lwe.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="software">
+            <div class="pub-year">Manuscript</div>
+            <div class="pub-title">On Testing and Debugging Quantum Software</div>
+            <div class="pub-authors">Andriy Miranskyy, Lei Zhang, Javad Doliskani</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Software Engineering</span>
+                <a href="https://doliskani.net/jake/pdfs/quantum_testing_debugging.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="algo">
+            <div class="pub-year">2023</div>
+            <div class="pub-title">How to Sample From The Limiting Distribution of a Continuous-Time Quantum Walk</div>
+            <div class="pub-authors">Javad Doliskani</div>
+            <div class="pub-venue">IEEE Transactions on Information Theory</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Quantum Algorithms</span>
+                <a href="https://doliskani.net/jake/pdfs/lim_dist_qwalk.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="money">
+            <div class="pub-year">2022</div>
+            <div class="pub-title">Cryptanalysis of Three Quantum Money Schemes</div>
+            <div class="pub-authors">Andriyan Bilyk, Javad Doliskani, Zhiyong Gong</div>
+            <div class="pub-venue">Quantum Information Processing</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Quantum Money</span>
+                <a href="https://doliskani.net/jake/pdfs/qm_cryptanalysis.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="isogeny">
+            <div class="pub-year">2022</div>
+            <div class="pub-title">Faster Cryptographic Hash Function From Supersingular Isogeny Graphs</div>
+            <div class="pub-authors">Javad Doliskani, Geovandro C. C. F. Pereira, Paulo S. L. M. Barreto</div>
+            <div class="pub-venue">Selected Areas in Cryptography (SAC)</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Isogeny Crypto</span>
+                <a href="https://doliskani.net/jake/pdfs/si_hash.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card award" data-category="software">
+            <span class="award-badge">🏆 Distinguished Paper Award</span>
+            <div class="pub-year">2020</div>
+            <div class="pub-title">Is Your Quantum Program Bug-Free?</div>
+            <div class="pub-authors">Andriy Miranskyy, Lei Zhang, Javad Doliskani</div>
+            <div class="pub-venue">IEEE/ACM 42th International Conference on Software Engineering (ICSE)</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Quantum Software</span>
+                <a href="https://doliskani.net/jake/pdfs/ICSE20_quantum_debug.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="isogeny">
+            <div class="pub-year">2020</div>
+            <div class="pub-title">x-only point addition formula and faster compressed SIKE</div>
+            <div class="pub-authors">Geovandro Pereira, Javad Doliskani, David Jao</div>
+            <div class="pub-venue">Journal of Cryptographic Engineering</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Isogeny Crypto</span>
+                <a href="#" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="algo">
+            <div class="pub-year">2019</div>
+            <div class="pub-title">Toward an optimal quantum algorithm for polynomial factorization over finite fields</div>
+            <div class="pub-authors">Javad Doliskani</div>
+            <div class="pub-venue">Quantum Information & Computation</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Quantum Algorithms</span>
+                <a href="https://doliskani.net/jake/pdfs/quantum_poly_factor.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="fields">
+            <div class="pub-year">2019</div>
+            <div class="pub-title">Drinfeld Modules with Complex Multiplication, Hasse Invariants and Factoring Polynomials</div>
+            <div class="pub-authors">Javad Doliskani, Anand Kumar Narayanan, Éric Schost</div>
+            <div class="pub-venue">Journal of Symbolic Computation</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Finite Fields</span>
+                <a href="https://doliskani.net/jake/pdfs/supersingular_drinfeld_factoring.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="fields">
+            <div class="pub-year">2019</div>
+            <div class="pub-title">Computing isomorphisms and embeddings of finite fields</div>
+            <div class="pub-authors">Ludovic Brieulle, Luca De Feo, Javad Doliskani, Jean-Pierre Flori, Éric Schost</div>
+            <div class="pub-venue">Mathematics of Computation</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Finite Fields</span>
+                <a href="https://doliskani.net/jake/pdfs/ffisom.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="isogeny">
+            <div class="pub-year">2018</div>
+            <div class="pub-title">Faster key compression for isogeny-based cryptosystems</div>
+            <div class="pub-authors">Gustavo HM Zanon, Marcos A Simplicio, Geovandro CCF Pereira, Javad Doliskani, Paulo SLM Barreto</div>
+            <div class="pub-venue">IEEE Transactions on Computers</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Isogeny Crypto</span>
+                <a href="https://doliskani.net/jake/pdfs/fasterSIDH-ePrint.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+        <div class="pub-card" data-category="fields">
+            <div class="pub-year">2014</div>
+            <div class="pub-title">Fast arithmetic for the algebraic closure of finite fields</div>
+            <div class="pub-authors">Luca De Feo, Javad Doliskani, Éric Schost</div>
+            <div class="pub-venue">ISSAC 2014</div>
+            <div class="pub-footer">
+                <span class="pub-tag">Finite Fields</span>
+                <a href="https://doliskani.net/jake/pdfs/ff_compositum.pdf" class="pdf-link">📄 PDF</a>
+            </div>
+        </div>
+    </div>
+</div>

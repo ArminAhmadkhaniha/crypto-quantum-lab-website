@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Home</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Home</description>
+    <generator>Hugo -- 0.151.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/members/</guid>
+      <description>&lt;div class=&#34;members-section&#34;&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;div class=&#34;text-center&#34; style=&#34;margin-bottom: 60px;&#34;&gt;
+            &lt;h2 class=&#34;section-title&#34;&gt;Our Team&lt;/h2&gt;
+            &lt;p class=&#34;section-text&#34;&gt;Researchers, students, and engineers building the future.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;supervisor-card&#34;&gt;
+            &lt;div class=&#34;supervisor-img-container&#34;&gt;
+                &lt;img src=&#34;https://doliskani.net/jake/images/me.jpg&#34; alt=&#34;Dr. Jake Doliskani&#34; class=&#34;supervisor-img&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;supervisor-content&#34;&gt;
+                &lt;h3 class=&#34;member-name&#34; style=&#34;font-size: 2rem;&#34;&gt;Dr. Jake Doliskani&lt;/h3&gt;
+                &lt;p class=&#34;member-role&#34;&gt;Principal Investigator&lt;/p&gt;
+                &lt;p class=&#34;member-bio&#34;&gt;
+                    Assistant Professor at the Department of Computing and Software at McMaster University. 
+                    Previously faculty at TMU and NSERC post-doctoral fellow at the Institute for Quantum Computing (UWaterloo). 
+                    PhD in Computer Science from the Ontario Research Center for Computer Algebra.
+                &lt;/p&gt;
+                &lt;p class=&#34;member-bio&#34; style=&#34;font-style: italic;&#34;&gt;
+                    &lt;strong&gt;Interests:&lt;/strong&gt; Post-Quantum Cryptography, Quantum Computing, Applied Cryptography.
+                &lt;/p&gt;
+                &lt;div style=&#34;margin-top: 20px;&#34;&gt;
+                    &lt;a href=&#34;https://doliskani.net/jake/&#34; target=&#34;_blank&#34; class=&#34;btn btn-outline&#34;&gt;
+                        Visit Website ↗
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;text-center&#34; style=&#34;margin-bottom: 40px;&#34;&gt;
+            &lt;h3 style=&#34;color: #0f172a; font-size: 1.8rem;&#34;&gt;Current Members&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;team-grid&#34;&gt; 
+            &lt;div class=&#34;member-card&#34;&gt;
+                &lt;div class=&#34;member-photo-wrapper&#34;&gt;
+                    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D03AQHFYPN8Qk9s1A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1642551261327?e=1768435200&amp;v=beta&amp;t=wQxdtxzsuyZA1TCz0fsSvPZKVEktiTOQ7hvXhsAOGT0&#34; alt=&#34;Lu Chen&#34; class=&#34;member-photo&#34;&gt;
+                &lt;/div&gt;
+                &lt;h4 class=&#34;member-name&#34;&gt;Lu Chen&lt;/h4&gt;
+                &lt;p class=&#34;member-role&#34;&gt;PhD Candidate&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/</guid>
+      <description>&lt;script&gt;
+function filterResearch(category) {
+    // 1. Update Buttons
+    const buttons = document.querySelectorAll(&#39;.filter-btn&#39;);
+    buttons.forEach(btn =&gt; btn.classList.remove(&#39;active&#39;));
+    event.target.classList.add(&#39;active&#39;);
+
+    // 2. Filter Cards
+    const cards = document.querySelectorAll(&#39;.pub-card&#39;);
+    cards.forEach(card =&gt; {
+        if (category === &#39;all&#39; || card.dataset.category.includes(category)) {
+            card.classList.remove(&#39;hide&#39;);
+            card.classList.add(&#39;show&#39;);
+        } else {
+            card.classList.add(&#39;hide&#39;);
+            card.classList.remove(&#39;show&#39;);
+        }
+    });
+}
+&lt;/script&gt;
+&lt;div class=&#34;container&#34; style=&#34;padding-top: 50px; padding-bottom: 100px;&#34;&gt;
+    &lt;div class=&#34;text-center&#34; style=&#34;margin-bottom: 60px;&#34;&gt;
+        &lt;h1 class=&#34;display-1&#34; style=&#34;color: #0f172a; font-size: 3rem;&#34;&gt;Research &amp; Publications&lt;/h1&gt;
+        &lt;p class=&#34;lead&#34; style=&#34;max-width: 700px; margin: 0 auto; color: #64748b;&#34;&gt;
+            Exploring the frontiers of Post-Quantum Cryptography, Isogeny Graphs, and Quantum Software Engineering.
+        &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
